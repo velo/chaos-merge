@@ -64,13 +64,13 @@ public final class OrientEdge extends OrientElement implements Edge {
     @Override
     public Iterator<Vertex> vertices(Direction direction) {
         switch (direction) {
-        case OUT:
-            return graph.vertices(vOut.getIdentity());
-        case IN:
-            return graph.vertices(vIn.getIdentity());
-        case BOTH:
-        default:
-            return graph.vertices(vOut.getIdentity(), vIn.getIdentity());
+            case OUT:
+                return graph.vertices(vOut.getIdentity());
+            case IN:
+                return graph.vertices(vIn.getIdentity());
+            case BOTH:
+            default:
+                return graph.vertices(vOut.getIdentity(), vIn.getIdentity());
         }
     }
 
